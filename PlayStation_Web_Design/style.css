@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	overflow: hidden;
+}
+
+.container {
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+  }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+  }
+}
+
+header .content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 60px;
+}
+
+header img:first-child {
+	width: 51px;
+}
+
+header nav ul li {
+	list-style: none;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+header nav ul li a {
+	text-decoration: none;
+	color: #333;
+}
+
+header img:last-child {
+	width: 32px;
+	display: none;
+}
+
+@media screen and (max-width: 676px) {
+	nav {
+		display: none;
+	}
+
+	header .content img:last-child {
+		display: inline;
+	}
+}
+
+/* Main part */
+main {
+	height: calc(100vh - 60px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+main .content {
+	display: flex;
+	align-items: center;
+}
+
+main .content div:first-child {
+	position: relative;
+	padding: 30px;
+}
+
+main .content div:first-child span {
+	display: block;
+	margin: 15px 0;
+}
+
+main .content div:first-child::before {
+	content: "";
+	position: absolute;
+	width: 9px;
+	height: 65%;
+	background-image: linear-gradient(to top, rgb(255 0 0 / 65%), rgb(255 164 235));
+	top: 25px;
+	left: 0;
+}
+
+main .content div:first-child h2 {
+	font-size: 3rem;
+}
+
+main .content div:first-child p {
+	font-size: 1.7rem;
+	color: #8d8787;
+	margin-top: 0px;
+}
+
+main .content div:first-child span:first-of-type {
+	color: #8d8787;
+}
+
+main .content div:first-child .price {
+	font-weight: 800;
+}
+
+main .content div:first-child button {
+	border: none;
+	background-image: linear-gradient(to left, rgb(255 0 0), rgb(218, 52, 182));
+	padding: 10px;
+	width: 130px;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	margin-top: 10px;
+}
+
+main .content div:last-child {
+	text-align: center;
+	position: relative;
+}
+
+main .content div:last-child:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to left, rgb(255 0 0), rgb(218, 52, 182));
+	z-index: -1;
+	border-radius: 20px;
+}
+
+main .content div:last-child img {
+	width: 37rem;
+	max-width: 100%;
+}
+
+@media screen and (max-width: 676px) {
+	main .content {
+		flex-direction: column-reverse;
+	}
+
+	main .content div:first-child h2 {
+		font-size: 2.3rem;
+	}
+
+	main .content div:first-child p {
+		font-size: 1rem;
+	}
+
+	main .content div:last-child img {
+		width: 27rem;
+	}
+}
